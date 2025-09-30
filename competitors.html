@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitors and Related Tools — Browser Automation & Agents Focus</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Competitors and Related Tools</h1>
+        <p class="subtitle">Browser automation & agents focus</p>
+        <p class="intro">This document expands the competitor research with an emphasis on browser-based automation, agent capabilities, and where each product overlaps (or differs) from Navi.</p>
+        <p class="note"><strong>IMPORTANT:</strong> Some product names and niche tools should be verified (branding, exact product names and links). I mark those with "VERIFY" where needed.</p>
+    </header>
+
+    <main>
+        <section id="openai">
+            <h2>OpenAI / ChatGPT (GPT family)</h2>
+            <div class="content">
+                <h3>What</h3>
+                <p>ChatGPT web + API, GPT models, and the extensible "GPTs"/plugin ecosystem. OpenAI also experiments with agent-like features (tool use, Actions, and developer agent patterns).</p>
+
+                <h3>Browser/agent capabilities</h3>
+                <ul>
+                    <li>Plugins and Tools enable third-party integrations (including browsing, web search, and custom APIs).</li>
+                    <li>Actions allow developers to build custom integrations for web automation.</li>
+                    <li>Can orchestrate web tasks via plugins or developer-built agents (e.g., browsing, form submission) but requires connectors.</li>
+                    <li>Desktop apps available for macOS, Windows.</li>
+                </ul>
+
+                <h3>Strengths</h3>
+                <ul>
+                    <li>Top-tier LLMs, large ecosystem, strong developer APIs, rapid iteration.</li>
+                </ul>
+
+                <h3>Weaknesses</h3>
+                <ul>
+                    <li>Out-of-the-box browser automation is not a first-class, packaged experience — needs connectors/plugins.</li>
+                </ul>
+
+                <h3>Official links</h3>
+                <ul>
+                    <li><a href="https://chat.openai.com/">https://chat.openai.com/</a> (ChatGPT)</li>
+                    <li><a href="https://platform.openai.com/">https://platform.openai.com/</a> (API platform)</li>
+                    <li><a href="https://openai.com/chatgpt/plugins/">https://openai.com/chatgpt/plugins/</a> (plugins)</li>
+                </ul>
+
+                <h3>Notes</h3>
+                <ul>
+                    <li>For browser automation use cases, OpenAI + a tool/plugin (or a custom agent harness) is a common approach.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="perplexity">
+            <h2>Perplexity (Perplexity.ai)</h2>
+            <div class="content">
+                <h3>What</h3>
+                <p>Answer engine focused on citations, source-aware answers, and an exploration UI. Perplexity has been expanding into browsing/navigation assistants. Product includes "Atomic" as a specific offering (chat-like interface similar to ChatGPT).</p>
+
+                <h3>Browser/agent capabilities</h3>
+                <ul>
+                    <li>Perplexity offers browsing-based assistants (often referred to as Navigator/Copilot in product messaging) that can aggregate sources and browse the web.</li>
+                    <li>Strong at surfacing evidence and sources rather than performing multi-step automation (but may offer navigation helpers/flows).</li>
+                    <li>Pro features include advanced search modes, file uploads, and API credits.</li>
+                </ul>
+
+                <h3>Strengths</h3>
+                <ul>
+                    <li>Source-aware responses, excellent for research and cited answers.</li>
+                    <li>Chat interface (Atomic) for conversational AI interactions.</li>
+                </ul>
+
+                <h3>Weaknesses</h3>
+                <ul>
+                    <li>Less focused on programmatic, persistent automation workflows (form filling, multi-step transactions) compared with dedicated automation frameworks.</li>
+                </ul>
+
+                <h3>Notes / VERIFY</h3>
+                <p>Official links found:</p>
+                <ul>
+                    <li><a href="https://www.perplexity.ai/">https://www.perplexity.ai/</a> (product home)</li>
+                    <li><a href="https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro">https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro</a> (Perplexity Pro help article — outlines Pro perks, search modes, API credit)</li>
+                </ul>
+                <p>Additional notes from verification:</p>
+                <ul>
+                    <li>Perplexity positions itself as an AI answer engine with Pro subscription tiers that unlock "Pro Searches", advanced models (Sonar, GPT-5, Claude, Gemini), Research/Labs modes, file uploads, and API credits.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="anthropic">
+            <h2>Anthropic / Claude</h2>
+            <div class="content">
+                <h3>What</h3>
+                <p>Claude models (Anthropic). Several third-party desktop clients and browser extensions integrate Claude models for in-context assistance.</p>
+
+                <h3>Browser/agent capabilities</h3>
+                <ul>
+                    <li>Official Claude for Chrome extension enables agentic browsing - allows Claude to read, click, and navigate websites alongside the user.</li>
+                    <li>Desktop apps available for download (macOS, Windows).</li>
+                    <li>Enterprise integrations and partner connectors (MCP connectors, Google Workspace).</li>
+                    <li>Through integrations and extensions, Claude can assist inside the browser; enterprise integrations may offer tool execution.</li>
+                    <li>Not primarily a browser-automation platform, but agent-like workflows are possible via integrations.</li>
+                </ul>
+
+                <h3>Strengths</h3>
+                <ul>
+                    <li>Safety-focused model design and strong conversational quality.</li>
+                    <li>Official browser extension for agentic browsing.</li>
+                </ul>
+
+                <h3>Weaknesses</h3>
+                <ul>
+                    <li>Requires integration work for advanced automation; fewer out-of-the-box automation-focused tools compared with Playwright/Puppeteer-based stacks.</li>
+                </ul>
+
+                <h3>Official links</h3>
+                <ul>
+                    <li><a href="https://claude.com/">https://claude.com/</a> (main product)</li>
+                    <li><a href="https://www.anthropic.com/claude">https://www.anthropic.com/claude</a> (models)</li>
+                    <li><a href="https://claude.com/download">https://claude.com/download</a> (desktop apps)</li>
+                    <li><a href="https://claude.com/product/claude-code">https://claude.com/product/claude-code</a> (Claude Code)</li>
+                    <li><a href="https://www.anthropic.com/news/claude-for-chrome">https://www.anthropic.com/news/claude-for-chrome</a> (Claude for Chrome extension announcement)</li>
+                    <li><a href="https://support.claude.com/en/articles/12012173-getting-started-with-claude-for-chrome">https://support.claude.com/en/articles/12012173-getting-started-with-claude-for-chrome</a> (extension help)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="browser-extensions">
+            <h2>Browser & Extension Agents (category)</h2>
+            <div class="content">
+                <p>These are tools and extensions that wire AI to the browser for in-page assistance or simple automation. Notable examples include:</p>
+                <ul>
+                    <li>Claude for Chrome (official Anthropic extension for agentic browsing)</li>
+                    <li>Merlin AI (comprehensive AI assistant for Chrome)</li>
+                    <li>Zapier Agents (AI-powered automation in browser)</li>
+                    <li>Promp Genie (better prompts for AI tools)</li>
+                    <li>Cider (AI-powered summarization)</li>
+                    <li>Tori (task management)</li>
+                    <li>Word Tune (writing assistance)</li>
+                    <li>Scribe (process capture and documentation)</li>
+                    <li>Atify (YouTube summaries)</li>
+                    <li>ReadAI (email summaries)</li>
+                    <li>Better AI Overview (replaces Google AI overview with Perplexity Pro)</li>
+                    <li>CG - Claude on Google (integrates Claude into Google searches)</li>
+                    <li>Grammarly (writing assistance)</li>
+                    <li>ChatGPT extensions (various third-party)</li>
+                </ul>
+
+                <h3>Capabilities</h3>
+                <ul>
+                    <li>Contextual in-page assistance (summarize page, generate replies, fill fields with prompts).</li>
+                    <li>Usually limited to the current page context; true multi-step automation requires scripting or a backend.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="autonomous-agents">
+            <h2>Autonomous / Open Agent Projects</h2>
+            <div class="content">
+                <ul>
+                    <li>Auto-GPT, AgentGPT, and similar open-source autonomous agent frameworks can run multi-step tasks and may be connected to browser automation (via Playwright/Selenium).</li>
+                </ul>
+
+                <h3>Capabilities</h3>
+                <ul>
+                    <li>Can orchestrate web actions, scrape, and interact with sites programmatically when paired with browser automation libraries.</li>
+                </ul>
+
+                <h3>Strengths</h3>
+                <ul>
+                    <li>Highly flexible and scriptable; good for experimentation.</li>
+                </ul>
+
+                <h3>Weaknesses</h3>
+                <ul>
+                    <li>Often fragile, require orchestration and monitoring, security risks if given unsafe permissions.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="browser-automation-platforms">
+            <h2>Browser Automation Platforms & Frameworks (adjacent tech)</h2>
+            <div class="content">
+                <p>These are not direct product competitors but are relevant building blocks and competitors for automation-first UX:</p>
+                <ul>
+                    <li>Playwright / Puppeteer: programmatic browser automation libraries (JavaScript/Python) commonly used to build automation agents.</li>
+                    <li>Apify, Browserless, Selenium Grid: hosted/browser automation platforms that run scripted flows at scale.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="raycast">
+            <h2>Raycast / Desktop Productivity Launchers</h2>
+            <div class="content">
+                <h3>What</h3>
+                <p>Raycast (macOS) and similar tools embed quick actions, extensions and may include AI-powered commands.</p>
+
+                <h3>Relevance</h3>
+                <ul>
+                    <li>They can act as local automation hubs (invoke scripts, run workflows) and are increasingly adding AI capabilities.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="manus">
+            <h2>Manus.im</h2>
+            <div class="content">
+                <h3>What</h3>
+                <p>Manus.im is a separate autonomous AI agent platform, not connected to Perplexity. It focuses on executing tasks and automating workflows.</p>
+
+                <p>Official links and notes:</p>
+                <ul>
+                    <li><a href="https://manus.im/">https://manus.im/</a> (product home — "Manus: Hands On AI")</li>
+                    <li>Manus is an autonomous agent/action engine focused on executing tasks and automating workflows (image/slides/webpage/spreadsheet generation are apparent UI outputs).</li>
+                    <li>Current pricing (verified September 2025): Basic $19/month (1,900 credits), Starter $39/month (3,900 credits), Pro $200/month (20,000 credits). Credits reset monthly, never expire, and can be purchased as add-ons. Free daily credits are available.</li>
+                </ul>
+
+                <h3>Browser/agent capabilities</h3>
+                <ul>
+                    <li>Manus provides multi-step task execution and appears oriented toward autonomous tasking (concurrent tasks, credit-based execution, file outputs).</li>
+                    <li>Strong emphasis on executing work (tasks that produce deliverables) rather than purely surfacing sources.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="comparison-matrix">
+            <h2>Quick comparison matrix (high level)</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product / Category</th>
+                            <th>Agent-level automation</th>
+                            <th>Browser-native actions</th>
+                            <th>Desktop / Extension</th>
+                            <th>Pricing model</th>
+                            <th>Best for</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>OpenAI (ChatGPT + Plugins)</td>
+                            <td>Medium (via plugins/agents)</td>
+                            <td>Possible (with plugins)</td>
+                            <td>Web + 3rd-party desktop clients / extensions</td>
+                            <td>Subscription / API billing</td>
+                            <td>Model quality & extensibility</td>
+                        </tr>
+                        <tr>
+                            <td>Perplexity</td>
+                            <td>Low–Medium (navigation focused)</td>
+                            <td>Yes (browsing/citation)</td>
+                            <td>Web, Pro subscription (desktop clients underway)</td>
+                            <td>Subscription (Pro) + API credits</td>
+                            <td>Research & sourceful answers</td>
+                        </tr>
+                        <tr>
+                            <td>Anthropic (Claude)</td>
+                            <td>Medium (via integrations)</td>
+                            <td>Yes (extensions)</td>
+                            <td>Web + integrations / partner apps</td>
+                            <td>Enterprise & subscription</td>
+                            <td>Safety-focused chat experience</td>
+                        </tr>
+                        <tr>
+                            <td>Auto-GPT / Agent frameworks</td>
+                            <td>High (autonomy)</td>
+                            <td>Yes (with Playwright)</td>
+                            <td>Self-hosted / developer tooling</td>
+                            <td>Open-source / self-hosted costs</td>
+                            <td>Experimental autonomous workflows</td>
+                        </tr>
+                        <tr>
+                            <td>Browser extensions (Merlin, Claude ext)</td>
+                            <td>Low–Medium</td>
+                            <td>Yes (in-page)</td>
+                            <td>Browser extensions</td>
+                            <td>Freemium / Paid upgrades</td>
+                            <td>Quick page assistance</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="features-matrix">
+            <h2>Features matrix (detailed)</h2>
+            <p>Columns: Browsing = can actively navigate the web and follow links; Multi-agent = supports multiple autonomous agents or concurrent tasking; Integrations = connectors (Drive, Slack, Notion, SSO); Desktop/Extension = official desktop apps or browser extensions; Pricing model = subscription, credits, freemium, or API; API = public API availability.</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Browsing</th>
+                            <th>Multi-agent</th>
+                            <th>Integrations</th>
+                            <th>Desktop / Extension</th>
+                            <th>Pricing model</th>
+                            <th>API</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Perplexity (perplexity.ai)</td>
+                            <td>Yes — research/browsing focused (Search & Research modes, Labs)</td>
+                            <td>Limited — research automation via Labs</td>
+                            <td>Pro provides API credits (Sonar) and file uploads; connectors limited</td>
+                            <td>Web first; Pro features and desktop apps announced</td>
+                            <td>Subscription (Pro) + API credits ($5/mo Sonar credit in Pro)</td>
+                            <td>Yes — Sonar API / Perplexity API links in help center</td>
+                        </tr>
+                        <tr>
+                            <td>Manus.im</td>
+                            <td>Yes — task execution including webpage/image generation</td>
+                            <td>Yes — concurrent tasking</td>
+                            <td>Limited (file uploads, outputs to various formats)</td>
+                            <td>Web first; Windows app available</td>
+                            <td>Subscription (Basic/Starter/Pro) + credit add-ons</td>
+                            <td>Yes — API docs at open.manus.ai</td>
+                        </tr>
+                        <tr>
+                            <td>Manus (manus.im)</td>
+                            <td>Yes — executes tasks and produces deliverables (webpage, spreadsheet, etc.)</td>
+                            <td>Yes — concurrent tasks and autonomous task execution (credit-based concurrency)</td>
+                            <td>In-app integrations unclear; focused on tasking & outputs</td>
+                            <td>Web app; mobile app announced; desktop presence limited</td>
+                            <td>Credit-based subscription tiers (Starter ~$39/mo, Pro ~$199–$200/mo) + free daily credits (reporting varies)</td>
+                            <td>Partial / limited public API info — primarily in-app tasking (verify in account)</td>
+                        </tr>
+                        <tr>
+                            <td>ChatGPT / OpenAI (chat.openai.com)</td>
+                            <td>Yes — web search & external tools via plugins and Connectors</td>
+                            <td>Yes — agents/tasks (ChatGPT agent, Tasks, Projects)</td>
+                            <td>Extensive connectors (Drive, Notion, SSO for business) and plugin ecosystem</td>
+                            <td>Web, iOS, Android, desktop app (macOS) and many community desktop wrappers/extensions</td>
+                            <td>Freemium + Plus ($20/mo), Pro ($200/mo), Business ($25+/user/mo), Enterprise</td>
+                            <td>Yes — extensive API platform separate from ChatGPT product (platform.openai.com)</td>
+                        </tr>
+                        <tr>
+                            <td>Anthropic / Claude (claude.com)</td>
+                            <td>Yes — web search & research features; Claude Solutions for agents; Claude for Chrome extension</td>
+                            <td>Medium — agent solutions provided (AI agents solution pages)</td>
+                            <td>Connectors (Google Workspace, partner MCP connectors), enterprise connectors</td>
+                            <td>Web + official desktop downloads (claude.ai download) and browser extension (Claude for Chrome)</td>
+                            <td>Freemium + Pro (~$17/mo) + Max (from $100+/user/mo); API pricing available</td>
+                            <td>Yes — Claude developer platform & API docs (docs.claude.com)</td>
+                        </tr>
+                        <tr>
+                            <td>Auto-Agent frameworks (Auto-GPT, AgentGPT)</td>
+                            <td>Yes (when paired with Playwright / Puppeteer)</td>
+                            <td>Yes — often the core capability (autonomous agents)</td>
+                            <td>Depends on integrations developers add</td>
+                            <td>Self-hosted tooling; no official desktop product</td>
+                            <td>Open-source (self-hosted) or paid hosted variants</td>
+                            <td>Varies — generally use underlying LLM APIs (OpenAI, Claude, etc.)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="verification-notes">
+            <h2>Verification notes & next steps</h2>
+            <ul>
+                <li>Confirm Manus in-app pricing and API availability by logging into an account or checking the official account/pricing dashboard (some public reporting differs).</li>
+                <li>Capture direct links to Claude and ChatGPT download pages if we want to reference desktop client installers in the product research.</li>
+                <li>If you'd like, I can extract the short one-line SWOTS for each of the high-priority products and add them below.</li>
+            </ul>
+        </section>
+
+        <section id="browser-navigation">
+            <h2>Browser navigation (classification)</h2>
+            <p>For each product below I classify how its browser navigation works: "Extension" = runs inside the user's installed browser as an extension; "Server/container" = navigates web pages in the product's own server-side headless/container browser instances; "Local browser control" = can drive the user's local browser instance (only when deployed with local executors like Playwright); "Web UI / web app" = browsing via a hosted web UI but not necessarily executing multi‑step navigation.</p>
+            <ul>
+                <li><strong>Perplexity (perplexity.ai):</strong> Server/container + Web UI<br>Navigation runs inside Perplexity's service (server-side browsing, Research/Labs). It's not a browser extension that controls your local browser.</li>
+                <li><strong>Manus (manus.im):</strong> Server/container agent<br>Autonomous agent executes tasks in Manus-managed containers/headless browsers (credit-based concurrency). Does not drive your local browser by default.</li>
+                <li><strong>ChatGPT / OpenAI (chat.openai.com + Plugins/Actions):</strong> Server-side tools & optionally Extension/Connectors<br>Core browsing and Actions are executed by OpenAI's server-side tools or plugin connectors. To control a local browser you must install a client-side extension or run a local executor (developer integration using Playwright/Puppeteer).</li>
+                <li><strong>Anthropic / Claude (claude.com):</strong> Server/container + Extension (Claude for Chrome)<br>Claude agents and connectors perform server-side navigation and research. The official Claude for Chrome extension enables agentic browsing within the user's browser. Desktop apps are UI shells connecting to cloud agents.</li>
+                <li><strong>Auto-Agent frameworks (Auto-GPT, AgentGPT):</strong> Local or Server depending on deployment<br>These frameworks are planners; they can control a local browser if run with a local executor (Playwright/Puppeteer) or run headless browsers on servers/containers when hosted. Behavior depends on how the user/deployer configures the executor.</li>
+                <li><strong>Browser extensions (Merlin, ChatGPT-for-Google, Claude extensions):</strong> Extension (in-browser)<br>These run inside the user's browser context and can read the DOM, inject content, fill fields, and interact with pages the user has open. They require extension permissions and do not spawn remote browser sessions by default.</li>
+            </ul>
+        </section>
+
+        <section id="next-steps">
+            <h2>Next steps / Recommendations</h2>
+            <ul>
+                <li>VERIFY exact product names and links for: Perplexity Navigator vs. any Manus.im link; specific Claude desktop apps; notable browser-agent extensions.</li>
+                <li>For each high-priority competitor (OpenAI, Perplexity, Claude, Auto-Agent projects): produce a one-page SWOT and link repository of official docs and pricing.</li>
+                <li>Map features we want in Navi (browser automation primitives, safety/permissions model, local file context, agent orchestration) against competitor feature sets.</li>
+            </ul>
+        </section>
+
+        <section id="swot-analyses">
+            <h2>SWOT Analyses for Top Competitors</h2>
+
+            <h3>OpenAI (ChatGPT + GPT Ecosystem)</h3>
+            <ul>
+                <li><strong>Strengths:</strong> Top-tier LLM quality and performance; extensive plugin/GPT ecosystem for integrations; strong developer APIs and rapid iteration; broad adoption and community support.</li>
+                <li><strong>Weaknesses:</strong> Browser automation is not a first-class, packaged feature—requires custom plugins/connectors; less focused on persistent, multi-step workflows out-of-the-box.</li>
+                <li><strong>Opportunities:</strong> Leverage existing ecosystem to build native automation tools; expand into enterprise automation solutions; integrate with browser automation libraries.</li>
+                <li><strong>Threats:</strong> Competition from specialized automation platforms; potential regulatory restrictions on AI plugins and integrations; user privacy concerns with third-party plugins.</li>
+            </ul>
+
+            <h3>Perplexity</h3>
+            <ul>
+                <li><strong>Strengths:</strong> Excellent source-aware responses with citations; strong browsing and research capabilities; user-friendly interface for exploration; Pro features like Labs for complex projects.</li>
+                <li><strong>Weaknesses:</strong> Primarily focused on research and surfacing sources rather than executing multi-step automation; limited programmatic control and customization.</li>
+                <li><strong>Opportunities:</strong> Expand into full automation workflows; integrate more AI models for diverse tasks; develop enterprise research tools.</li>
+                <li><strong>Threats:</strong> New AI search engines; dependency on web scraping and source availability; competition from more versatile AI assistants.</li>
+            </ul>
+
+            <h3>Anthropic (Claude)</h3>
+            <ul>
+                <li><strong>Strengths:</strong> Strong emphasis on safety and ethical AI; high-quality conversational responses; official Claude for Chrome extension for agentic browsing; growing integrations and extensions for browser assistance.</li>
+                <li><strong>Weaknesses:</strong> Requires third-party integrations for advanced automation; smaller ecosystem compared to OpenAI; not primarily an automation platform.</li>
+                <li><strong>Opportunities:</strong> Build dedicated safety-focused automation tools; partner with browser platforms; expand enterprise adoption.</li>
+                <li><strong>Threats:</strong> Competition from OpenAI's ecosystem; regulatory focus on AI safety; slower iteration compared to other players.</li>
+            </ul>
+
+            <h3>Auto-GPT and Agent Frameworks (e.g., Auto-GPT, AgentGPT)</h3>
+            <ul>
+                <li><strong>Strengths:</strong> Highly flexible and customizable for experimentation; open-source nature allows deep integration with browser automation libraries; good for prototyping autonomous workflows.</li>
+                <li><strong>Weaknesses:</strong> Often fragile and require significant setup/monitoring; security risks with unsafe permissions; lack of polished user experience.</li>
+                <li><strong>Opportunities:</strong> Community-driven improvements and integrations; potential for commercialization of successful frameworks; focus on niche automation needs.</li>
+                <li><strong>Threats:</strong> Commercial platforms offering easier, more reliable solutions; maintenance burden on users; evolving security standards.</li>
+            </ul>
+        </section>
+
+        <section id="gap-analysis">
+            <h2>Gap-Analysis: Navi Features vs. Competitors</h2>
+            <p>This table maps Navi's desired features against the top competitors. Ratings: High (strong presence/integration), Medium (partial support), Low (minimal or requires workarounds), None (not available).</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>OpenAI</th>
+                            <th>Perplexity</th>
+                            <th>Claude</th>
+                            <th>Auto-Agent Frameworks</th>
+                            <th>Navi Target</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Browser Automation Primitives</strong></td>
+                            <td>Medium (via plugins/connectors)</td>
+                            <td>High (browsing-focused)</td>
+                            <td>Medium (Claude for Chrome extension)</td>
+                            <td>High (with Playwright/Selenium)</td>
+                            <td>High (core feature)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Safety/Permissions Model</strong></td>
+                            <td>Medium (API controls)</td>
+                            <td>Medium (Pro features)</td>
+                            <td>High (safety-focused design)</td>
+                            <td>Low (user-managed)</td>
+                            <td>High (built-in permissions)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Local File Context</strong></td>
+                            <td>Medium (file uploads in Pro)</td>
+                            <td>High (file analysis in Pro)</td>
+                            <td>Medium (integrations)</td>
+                            <td>Medium (customizable)</td>
+                            <td>High (native support)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Agent Orchestration</strong></td>
+                            <td>Medium (GPTs/plugins)</td>
+                            <td>Medium (Labs for projects)</td>
+                            <td>Medium (agent solutions and extensions)</td>
+                            <td>High (multi-agent frameworks)</td>
+                            <td>High (orchestration layer)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>(End of expanded competitor notes)</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Features & Use Cases — Navi</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #f8f9fa;
+      color: #1a365d;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1a365d;
+      color: #fff;
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      color: #00d4aa;
+      margin-top: 2rem;
+    }
+    h3 {
+      color: #ff6b6b;
+      margin-top: 1.5rem;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(26,54,93,0.08);
+      padding: 2rem;
+    }
+    ul, ol {
+      margin-left: 2rem;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #00d4aa;
+      margin-bottom: 1rem;
+    }
+    .feature {
+      margin-bottom: 1.5rem;
+    }
+    .footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+      margin: 2rem 0 1rem 0;
+    }
+    @media (max-width: 600px) {
+      section {
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bowser Crew / Navi</h1>
+    <div class="tagline">AI-Powered Personal Assistant</div>
+    <p>Product Features & Comprehensive Use Cases</p>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>Bowser Crew is an AI-powered personal assistant built on CrewAI, designed to provide intelligent, conversational support with integrated web browsing and automation capabilities. It leverages the Model Context Protocol (MCP) and Playwright for seamless interaction with web applications, enabling users to perform complex tasks through natural language commands.</p>
+
+    <h2>What It Does</h2>
+    <p>Bowser Crew acts as a collaborative AI agent system that processes user messages, maintains conversation history, and executes tasks involving web navigation, data extraction, form filling, and content generation. It combines structured workflows with autonomous decision-making to deliver context-aware responses and automate web-based activities.</p>
+
+    <h2>Problems It Solves</h2>
+    <ul>
+      <li><strong>Limited AI Web Interaction:</strong> Traditional AI assistants lack direct web browsing capabilities, requiring manual intervention for online tasks.</li>
+      <li><strong>Fragmented Tool Integration:</strong> Users struggle to connect AI with web automation tools without complex setups.</li>
+      <li><strong>Conversation Context Loss:</strong> Many AI systems don't persist or utilize chat history effectively for personalized responses.</li>
+      <li><strong>Manual Web Automation:</strong> Repetitive web tasks like form filling or data scraping are time-consuming and error-prone.</li>
+      <li><strong>Scalable AI Collaboration:</strong> Building multi-agent systems for complex workflows requires extensive coding knowledge.</li>
+    </ul>
+
+    <h2>Features</h2>
+    <ul>
+      <li><strong>Interactive Chat Interface:</strong> Natural language conversation with persistent chat history stored in JSON format.</li>
+      <li><strong>MCP Integration:</strong> Seamless connection to MCP servers for accessing external tools and services.</li>
+      <li><strong>Playwright Browser Automation:</strong> 21+ built-in tools for web interaction, including navigation, element interaction, screenshot capture, and network monitoring.</li>
+      <li><strong>YAML Configuration:</strong> Easily customizable agents and tasks through configuration files.</li>
+      <li><strong>Error Handling and Caching:</strong> Robust error management and intelligent caching for tool performance.</li>
+      <li><strong>Asynchronous Tool Support:</strong> Handles both synchronous and asynchronous operations for efficient task execution.</li>
+      <li><strong>State Management:</strong> Maintains flow state for complex, resumable workflows.</li>
+      <li><strong>Delegation and Collaboration:</strong> Agents can delegate tasks and collaborate using built-in tools like "Delegate Work" and "Ask Question."</li>
+    </ul>
+
+    <h2>Use Cases</h2>
+    <ul>
+      <li><strong>Online Research Assistance:</strong> Quickly gather and summarize information from multiple websites on topics like current events or technical documentation.</li>
+      <li><strong>Web Form Automation:</strong> Automatically fill out registration forms, surveys, or application submissions across various sites.</li>
+      <li><strong>E-commerce Shopping:</strong> Assist with product searches, price comparisons, and purchase recommendations on retail websites.</li>
+      <li><strong>Content Creation:</strong> Generate articles or reports by researching and synthesizing information from web sources.</li>
+      <li><strong>Data Extraction:</strong> Scrape and organize data from websites, such as contact lists, product catalogs, or news feeds.</li>
+      <li><strong>Social Media Management:</strong> Monitor mentions, schedule posts, or analyze engagement across social platforms.</li>
+      <li><strong>Travel Planning:</strong> Research destinations, compare flight/hotel options, and book reservations via travel sites.</li>
+      <li><strong>Educational Research:</strong> Help students find academic resources, explain concepts using web-based materials, and generate study guides.</li>
+      <li><strong>Customer Support Automation:</strong> Handle common inquiries by accessing knowledge bases and FAQ sections on company websites.</li>
+      <li><strong>News Aggregation:</strong> Curate personalized news feeds by monitoring multiple sources and summarizing key stories.</li>
+      <li><strong>Financial Tracking:</strong> Monitor stock prices, check account balances, or analyze market trends from financial websites.</li>
+      <li><strong>Recipe and Meal Planning:</strong> Search for recipes, nutritional information, and grocery lists based on user preferences.</li>
+      <li><strong>Health Information Lookup:</strong> Provide reliable health advice by cross-referencing medical websites and symptom checkers.</li>
+      <li><strong>Code Repository Exploration:</strong> Assist developers in finding code examples, documentation, or open-source projects on GitHub.</li>
+      <li><strong>Appointment Scheduling:</strong> Book medical, dental, or service appointments through online booking systems.</li>
+      <li><strong>Language Translation:</strong> Translate text or documents using web-based translation services with context preservation.</li>
+      <li><strong>Weather Monitoring:</strong> Provide real-time weather updates and forecasts by accessing meteorological websites.</li>
+      <li><strong>Legal Research:</strong> Gather case law, statutes, or legal precedents from online databases for preliminary research.</li>
+      <li><strong>Real Estate Search:</strong> Help users find properties, compare listings, and schedule virtual tours on real estate platforms.</li>
+      <li><strong>Event Planning:</strong> Research venues, vendors, and logistics for weddings, conferences, or parties using event planning sites.</li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    <p><a href="index.html">← Back to Strategic Hub</a> | Navi Product Documentation</p>
+  </div>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\daniel.aragao\Documents\Coding\mcp agents\Navi\product.html
