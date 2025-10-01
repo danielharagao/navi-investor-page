@@ -910,6 +910,211 @@ table tr:hover {
   padding: 4rem 0;
 }
 
+/* Roadmap Timeline Styles */
+.roadmap-timeline {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.roadmap-section {
+  margin-bottom: 2rem;
+}
+
+.roadmap-section:last-child {
+  margin-bottom: 0;
+}
+
+.roadmap-status {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.roadmap-status.done {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.roadmap-status.ongoing {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.roadmap-status.soon {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.roadmap-items {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.roadmap-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--bg-light);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.roadmap-item:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-sm);
+}
+
+.roadmap-item.done {
+  background: #f0fdf4;
+  border-left: 4px solid #22c55e;
+}
+
+.roadmap-item.ongoing {
+  background: #fffbeb;
+  border-left: 4px solid #f59e0b;
+}
+
+.roadmap-item.soon {
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+}
+
+.roadmap-icon {
+  font-size: 1.2rem;
+  margin-right: 0.75rem;
+  min-width: 2rem;
+}
+
+.roadmap-text {
+  font-weight: 500;
+}
+
+/* Financial Page Styles */
+.pricing-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.price-tier {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.price-tier.featured {
+  border: 2px solid var(--accent-teal);
+}
+
+.price-tier .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin: 0.5rem 0;
+}
+
+.financial-table {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.financial-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.financial-table th,
+.financial-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.financial-table th {
+  background: var(--primary-blue);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.financial-table tr:nth-child(even) {
+  background: var(--bg-light);
+}
+
+.financial-table tr.highlight {
+  background: #fef3c7;
+  font-weight: 600;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.metric-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.big-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-teal);
+  margin: 0.5rem 0;
+}
+
+.market-analysis {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.profitability {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  margin: 2rem 0;
+}
+
+.investment-scenarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.scenario {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.scenario.featured {
+  border: 2px solid var(--accent-teal);
+  background: #f0fdfa;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .pricing-grid,
@@ -923,6 +1128,19 @@ table tr:hover {
   }
   
   .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .roadmap-items {
+    grid-template-columns: 1fr;
+  }
+  
+  .metrics-grid,
+  .investment-scenarios {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-summary {
     grid-template-columns: 1fr;
   }
 }
