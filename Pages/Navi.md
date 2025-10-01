@@ -164,14 +164,64 @@ Navi maintains conversation history for personalized, context-aware interactions
 
 ## Target Audience
 
+### Primary Market: Marketing Executives & Entrepreneurs
+**Who**: Marketing executives and entrepreneurs who want to free up time spent on web-based repetitive and ad-hoc tasks and do more using the best AI technologies in the market - not just be tied to a single platform like ChatGPT or paying multiple AI platforms that can't even do boring tasks for you.
+
+**Market Size**: The market is enormous - millions of professionals globally spend hours daily on repetitive browser-based tasks that could be automated.
+
 ### Primary Segments
-1. **Knowledge Workers**: Professionals who spend significant time on web-based tasks. Pain points: Repetitive data entry, research, form filling. Use cases: Report generation, data collection, customer research.
-2. **Developers & Technical Users**: Engineers, analysts, and technical professionals. Pain points: Manual testing, data scraping, integration work. Use cases: Automated testing, API integration, data processing.
-3. **Small Business Owners**: Entrepreneurs managing multiple online systems. Pain points: Manual order processing, customer management, reporting. Use cases: E-commerce automation, customer onboarding, financial reporting.
+1. **Marketing Executives**: Professionals managing campaigns, reports, and multi-platform coordination. Pain points: Social media management, report generation, lead tracking across platforms. Use cases: Campaign automation, performance reporting, lead nurturing workflows.
+2. **Entrepreneurs & Business Owners**: Leaders managing multiple online systems and processes. Pain points: Manual order processing, customer management, cross-platform coordination. Use cases: E-commerce automation, customer onboarding, business intelligence gathering.
+3. **Knowledge Workers**: Professionals who spend significant time on web-based tasks. Pain points: Repetitive data entry, research, form filling. Use cases: Report generation, data collection, customer research.
 
 ### Secondary Segments
-4. **Enterprise Users**: Large organizations with complex workflows. Pain points: Compliance, scalability, integration complexity. Use cases: ERP automation, compliance reporting, multi-system integration.
-5. **Students & Researchers**: Academic users conducting research. Pain points: Data collection, citation management, literature reviews. Use cases: Research automation, data aggregation, citation tracking.
+4. **Developers & Technical Users**: Engineers, analysts, and technical professionals. Pain points: Manual testing, data scraping, integration work. Use cases: Automated testing, API integration, data processing.
+5. **Enterprise Users**: Large organizations with complex workflows. Pain points: Compliance, scalability, integration complexity. Use cases: ERP automation, compliance reporting, multi-system integration.
+
+## Pricing Strategy
+
+### Competitive Positioning
+Navi positions itself at a premium price point compared to main competitors, reflecting our superior automation capabilities and multi-platform AI approach.
+
+### Pricing Tiers
+
+#### **Free Plan - "Starter"**
+- **Price**: $0/month
+- **Limitations**: Significantly limited automation runs and features
+- **Target**: Trial users and light usage scenarios
+- **Goal**: Product discovery and conversion to paid plans
+
+#### **Professional Plan - "Pro"**
+- **Price**: $25/month
+- **Target**: Individual professionals, marketing executives, small business owners
+- **Features**: Full automation capabilities with reasonable usage limits
+- **Positioning**: Premium alternative to ChatGPT Plus ($20/month) with actual task execution
+
+#### **Enterprise Plan - "Scale"**
+- **Price**: $250/month
+- **Target**: Larger businesses, teams, power users with extensive automation needs
+- **Features**: Unlimited automations, priority support, advanced integrations
+- **Positioning**: Enterprise-grade solution for serious productivity scaling
+
+### Competitive Analysis
+- **vs. ChatGPT Plus ($20/month)**: Navi Pro ($25) offers actual task execution, not just conversation
+- **vs. Perplexity Pro ($20/month)**: Navi Pro provides automation, not just research
+- **vs. Claude Pro ($20/month)**: Navi Pro delivers end-to-end workflow automation
+- **Value Proposition**: Higher price reflects genuine productivity ROI through automation
+
+## Current Development Status
+
+### Pre-Launch Phase ✅
+**Status**: We are currently in the pre-launch phase with **5 absolutely delighted users** who are actively using and providing feedback on the product.
+
+**Key Achievements**:
+- ✅ Working MVP with desktop application
+- ✅ Chrome browser automation fully functional
+- ✅ 5 pilot users reporting significant time savings and satisfaction
+- ✅ Core automation workflows validated
+- ✅ User feedback driving product refinement
+
+**Next Milestone**: Public launch based on pilot success and user validation
 
 ## Prototype Plan & MVP
 **Scope**: Build a focused, installable desktop MVP for a single pilot team (3–5 users) that demonstrates ad-hoc task execution and scheduled reporting on common web apps (CRM + one analytics/dashboard tool).
@@ -254,6 +304,31 @@ Navi maintains conversation history for personalized, context-aware interactions
 **Q1 2026**: Multi-agent orchestration, API platform, Enterprise features.
 **Q2 2026**: Mobile companion app, Advanced integrations, Team collaboration tools.
 **Q3 2026**: AI model marketplace, Advanced analytics, Global expansion.
+
+## The Team
+
+### Founding Team
+
+#### Daniel Aragão - Co-Founder & CEO
+**Background**: Business analyst with 10+ years of experience working with technology and business. Expert in identifying market opportunities and translating business requirements into scalable technology solutions.
+
+**Role**: Product strategy, business development, investor relations, and market analysis. Responsible for ensuring Navi solves real business problems and delivers measurable ROI.
+
+#### Senior Developer - Co-Founder & CTO  
+**Background**: Seasoned senior developer with almost 15 years of experience delivering scalable technology solutions to the biggest companies in the market.
+
+**Role**: Technical architecture, product development, and engineering leadership. Responsible for building robust, scalable automation technology that powers Navi's capabilities.
+
+#### Pedro - Head of Content & Marketing
+**Background**: Professional video maker and editor specializing in content production and marketing for technology companies.
+
+**Role**: Content strategy, video production, marketing materials, and brand development. Responsible for communicating Navi's value proposition and building market awareness.
+
+### Why This Team
+- **Proven Track Record**: Combined 25+ years of experience in technology and business
+- **Complementary Skills**: Business strategy, technical execution, and marketing expertise
+- **Market Understanding**: Deep knowledge of both enterprise needs and technical feasibility
+- **Execution Focus**: Small, focused team with clear roles and accountability
 
 ## Marketing Strategy
 

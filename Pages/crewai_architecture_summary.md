@@ -4,7 +4,7 @@ Based on the ChatGPT conversation accessed on September 25, 2025, here's a compr
 
 ## 1. App Overview and Core Features
 - **Purpose**: A desktop app built in Python, using Navi (a framework for AI agents) with one Personal Assistant Agent running in verbose mode. It integrates MCP (Model Context Protocol) for tools, specifically Playwright MCP for headed browser navigation (Chrome browser setup).
-- **LLM**: OpenAI GPT-5-nano.
+- **AI Models**: Supports multiple leading AI models with configurable selection.
 - **UI**: ChatGPT-like interface with a sidebar containing a "Chat" list (chat history) and a "Tasks" button. The main screen shows user-agent messages, agent/tool execution logs (inline system messages, no separate log component), and verbose logs.
 - **Workspace**: JSON files for local persistence (speed, safety, manageability). Folders: one for chats (per-chat JSON) and one for tasks (each with Objective, Description, and Deliverable).
 - **Build**: Desktop app for Windows and macOS (not web). On first message, the chat displays the message, and the agent thinks/runs in verbose mode.

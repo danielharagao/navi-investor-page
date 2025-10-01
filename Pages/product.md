@@ -1,9 +1,9 @@
-Bowser Crew
+Navi
 Overview
-Bowser Crew is an AI-powered personal assistant built on CrewAI, designed to provide intelligent, conversational support with integrated web browsing and automation capabilities. It leverages the Model Context Protocol (MCP) and Playwright for seamless interaction with web applications, enabling users to perform complex tasks through natural language commands.
+Navi is an AI-powered personal assistant designed to provide intelligent, conversational support with integrated web browsing and automation capabilities. It leverages the Model Context Protocol (MCP) and Playwright for seamless interaction with web applications, enabling users to perform complex tasks through natural language commands.
 
 What It Does
-Bowser Crew acts as a collaborative AI agent system that processes user messages, maintains conversation history, and executes tasks involving web navigation, data extraction, form filling, and content generation. It combines structured workflows with autonomous decision-making to deliver context-aware responses and automate web-based activities.
+Navi acts as a collaborative AI agent system that processes user messages, maintains conversation history, and executes tasks involving web navigation, data extraction, form filling, and content generation. It combines structured workflows with autonomous decision-making to deliver context-aware responses and automate web-based activities.
 
 Problems It Solves
 Limited AI Web Interaction: Traditional AI assistants lack direct web browsing capabilities, requiring manual intervention for online tasks.
