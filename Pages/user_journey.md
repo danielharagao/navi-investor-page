@@ -15,7 +15,7 @@ flowchart LR
 
 ## SVG
 
-You can view the pre-rendered SVG at `Navi/user_journey.svg` which is included in the repo. If you open that file in a browser, you'll see a clean visual workflow designed for investor presentations.
+You can view the pre-rendered SVG at `../public/user_journey.svg` which is included in the repo. If you open that file in a browser, you'll see a clean visual workflow designed for investor presentations.
 
 ## Notes for embedding
 
@@ -23,7 +23,7 @@ You can view the pre-rendered SVG at `Navi/user_journey.svg` which is included i
 
 ```html
 <div style="max-width: 1000px; margin: 2rem auto;">
-  <img src="Navi/user_journey.svg" alt="Navi user journey" style="width:100%; height:auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.08);" />
+  <img src="../public/user_journey.svg" alt="Navi user journey" style="width:100%; height:auto; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.08);" />
 </div>
 ```
 
@@ -34,7 +34,7 @@ You can view the pre-rendered SVG at `Navi/user_journey.svg` which is included i
 If you'd like, I can:
 
 - Embed the SVG directly into your `index.html` and commit the change so the Pages site shows the visual.
-- Convert the Mermaid flow into a higher-fidelity SVG using a tool and replace or augment `user_journey.svg`.
+- Convert the Mermaid flow into a higher-fidelity SVG using a tool and replace or augment `../public/user_journey.svg`.
 - Add small animations or step-by-step highlights for interactive demos.
 
 Tell me which option to apply next and I'll update the files and commit.
