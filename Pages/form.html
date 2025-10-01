@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Early Adopter Program — Navi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+      margin-bottom: 1.5rem;
+    }
+    .form-section {
+      margin-bottom: 2rem;
+    }
+    .form-field {
+      margin-bottom: 1rem;
+    }
+    .form-field label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .form-field input, .form-field select, .form-field textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #d0e6e2;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.5rem;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+    }
+    .checkbox-group input {
+      margin-right: 0.5rem;
+    }
+    .footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+      margin: 2rem 0 1rem 0;
+    }
+    @media (max-width: 600px) {
+      section {
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .checkbox-group {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Early Adopter Interest Form</h1>
+    <div class="tagline">Navi AI Assistant</div>
+    <p>Join our early adopter program and help shape the future of productivity</p>
+  </header>
+
+  <section>
+    <p>Thank you for your interest in Navi, the AI personal assistant that actually does the work for you! This form helps us understand our early adopters and tailor Navi to your needs.</p>
+
+    <form>
+      <div class="form-section">
+        <h2>Section 1: About You</h2>
+        <div class="form-field">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Your full name">
+        </div>
+        <div class="form-field">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Your email address">
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone (optional):</label>
+          <input type="tel" id="phone" placeholder="Your phone number">
+        </div>
+        <div class="form-field">
+          <label for="location">Location:</label>
+          <input type="text" id="location" placeholder="City, State/Province, Country">
+        </div>
+        <div class="form-field">
+          <label>Age Range:</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="age" value="under18"> Under 18</label>
+            <label><input type="radio" name="age" value="18-24"> 18-24</label>
+            <label><input type="radio" name="age" value="25-34"> 25-34</label>
+            <label><input type="radio" name="age" value="35-44"> 35-44</label>
+            <label><input type="radio" name="age" value="45-54"> 45-54</label>
+            <label><input type="radio" name="age" value="55-64"> 55-64</label>
+            <label><input type="radio" name="age" value="65+"> 65+</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Gender (optional):</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="nonbinary"> Non-binary</label>
+            <label><input type="radio" name="gender" value="prefernot"> Prefer not to say</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Section 2: Your Work</h2>
+        <div class="form-field">
+          <label for="jobtitle">Current Job Title:</label>
+          <input type="text" id="jobtitle" placeholder="Your position/role">
+        </div>
+        <div class="form-field">
+          <label>Industry/Sector:</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="industry" value="technology"> Technology</label>
+            <label><input type="checkbox" name="industry" value="healthcare"> Healthcare</label>
+            <label><input type="checkbox" name="industry" value="finance"> Finance</label>
+            <label><input type="checkbox" name="industry" value="education"> Education</label>
+            <label><input type="checkbox" name="industry" value="retail"> Retail/E-commerce</label>
+            <label><input type="checkbox" name="industry" value="manufacturing"> Manufacturing</label>
+            <label><input type="checkbox" name="industry" value="consulting"> Consulting</label>
+            <label><input type="checkbox" name="industry" value="marketing"> Marketing/Advertising</label>
+            <label><input type="checkbox" name="industry" value="government"> Government</label>
+            <label><input type="checkbox" name="industry" value="nonprofit"> Non-profit</label>
+            <label><input type="checkbox" name="industry" value="other"> Other</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Company Size:</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="companysize" value="1-10"> 1-10 employees</label>
+            <label><input type="radio" name="companysize" value="11-50"> 11-50 employees</label>
+            <label><input type="radio" name="companysize" value="51-200"> 51-200 employees</label>
+            <label><input type="radio" name="companysize" value="201-1000"> 201-1000 employees</label>
+            <label><input type="radio" name="companysize" value="1000+"> 1000+ employees</label>
+            <label><input type="radio" name="companysize" value="freelancer"> Freelancer/Independent</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Years of Experience in Current Role:</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="experience" value="less1"> Less than 1 year</label>
+            <label><input type="radio" name="experience" value="1-3"> 1-3 years</label>
+            <label><input type="radio" name="experience" value="4-7"> 4-7 years</label>
+            <label><input type="radio" name="experience" value="8-10"> 8-10 years</label>
+            <label><input type="radio" name="experience" value="10+"> More than 10 years</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Section 3: Your Home Life</h2>
+        <div class="form-field">
+          <label>Household Size:</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="household" value="alone"> Live alone</label>
+            <label><input type="radio" name="household" value="2"> 2 people</label>
+            <label><input type="radio" name="household" value="3-4"> 3-4 people</label>
+            <label><input type="radio" name="household" value="5+"> 5+ people</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Do you work from home?</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="workfromhome" value="fulltime"> Yes, full-time</label>
+            <label><input type="radio" name="workfromhome" value="parttime"> Yes, part-time</label>
+            <label><input type="radio" name="workfromhome" value="no"> No, I work in an office</label>
+            <label><input type="radio" name="workfromhome" value="hybrid"> Hybrid arrangement</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Section 4: Your Digital Challenges</h2>
+        <div class="form-field">
+          <label>How much time do you spend on repetitive digital tasks per week?</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="time" value="less1"> Less than 1 hour</label>
+            <label><input type="radio" name="time" value="1-5"> 1-5 hours</label>
+            <label><input type="radio" name="time" value="6-10"> 6-10 hours</label>
+            <label><input type="radio" name="time" value="11-20"> 11-20 hours</label>
+            <label><input type="radio" name="time" value="20+"> More than 20 hours</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>What would you do with extra time if someone automated your repetitive tasks?</label>
+          <textarea id="extra-time" rows="3" placeholder="e.g., spend more time with family, focus on strategic work..."></textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Section 5: How You Heard About Navi & Your Interest</h2>
+        <div class="form-field">
+          <label>How did you hear about Navi?</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="heard" value="social"> Social media</label>
+            <label><input type="radio" name="heard" value="recommendation"> Friend/colleague recommendation</label>
+            <label><input type="radio" name="heard" value="article"> Online article/blog</label>
+            <label><input type="radio" name="heard" value="search"> Search engine</label>
+            <label><input type="radio" name="heard" value="conference"> Conference/event</label>
+            <label><input type="radio" name="heard" value="other"> Other</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Would you like to see our investor pitch deck?</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="pitchdeck" value="yes"> Yes, please send it to me</label>
+            <label><input type="radio" name="pitchdeck" value="no"> No, thank you</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Section 6: What You Want to Do With Navi</h2>
+        <div class="form-field">
+          <label>What specific task would you automate first with Navi?</label>
+          <textarea id="first-task" rows="2" placeholder="e.g., Weekly report generation, Customer email follow-ups..."></textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Section 7: Consent & Communication Preferences</h2>
+        <div class="form-field">
+          <label>I consent to Navi collecting and processing my personal data for the purpose of improving our services and communicating about product updates.</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="consent" value="yes"> Yes, I consent</label>
+            <label><input type="radio" name="consent" value="no"> No, I do not consent</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>I would like to receive emails about Navi news, updates, and special offers.</label>
+          <div class="checkbox-group">
+            <label><input type="radio" name="newsletter" value="yes"> Yes, please add me to the newsletter</label>
+            <label><input type="radio" name="newsletter" value="no"> No, thank you</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Any additional comments or questions about Navi?</label>
+          <textarea id="comments" rows="3" placeholder="Your comments..."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" style="background: #00d4aa; color: #fff; padding: 1rem 2rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer;">Submit Form</button>
+    </form>
+
+    <p style="margin-top: 2rem; font-style: italic;">*Estimated completion time: 8-10 minutes</p>
+  </section>
+
+  <div class="footer">
+    <p><a href="index.html">← Back to Strategic Hub</a> | Navi Early Adopter Program</p>
+  </div>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\daniel.aragao\Documents\Coding\mcp agents\Navi\form.html

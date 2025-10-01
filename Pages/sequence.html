@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Journey & Flow — Navi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <!-- Mermaid.js for rendering diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
+</head>
+<body>
+  <header>
+    <h1>User Journey & Flow</h1>
+    <div class="tagline">Sequence Diagram</div>
+    <p>Detailed user flow from discovery to paid conversion</p>
+  </header>
+
+  <section>
+    <h2>Sequence Diagram</h2>
+    <p>The following Mermaid sequence diagram illustrates the complete user journey from visiting the landing page to becoming a paid user.</p>
+
+    <div class="mermaid">
+sequenceDiagram
+  autonumber
+  actor U as User
+  participant W as Website
+  participant E as E-mail Service
+  participant A as Desktop App
+  participant B as Backend/Auth API
+  participant S as Billing/Stripe
+
+  %% Discovery & Signup on Web
+  U->>W: Visita LP (Landing Page)
+  W-->>U: Value prop + CTA Early Adopter
+  U->>W: Preenche & envia formulário (nativo)
+  W->>B: POST /leads (dados do formulário)
+  B-->>W: 200 OK
+  B->>E: Enviar e-mail com link de download
+  E-->>U: E‑mail: "Download Page"
+
+  %% Download & Install
+  U->>W: Abre link de download
+  W-->>U: Página de download (Win/macOS)
+  U->>U: Baixa e instala o app
+  U->>A: Abre o aplicativo
+
+  %% App startup & token check (server-side)
+  A->>B: verify_token(local_token)
+  alt Token válido
+    B-->>A: 200 OK (válido)
+    A-->>U: Entra direto (área logada)
+  else Sem token / inválido
+    B-->>A: 401/invalid
+    A-->>U: Solicita e‑mail
+    U->>A: Informa e‑mail
+    A->>B: lookup_user(email)
+    alt Não existe usuário (apenas lead)
+      B-->>A: not_found
+      A->>B: create_user_from_lead(email)
+      B-->>A: created {password_empty:true}
+      A->>B: send_password_setup(email)
+      B->>E: E-mail "Create Password"
+      E-->>U: Link para criar senha
+      U->>W: Abre página "Create Password" e define senha
+      W->>B: set_password(email, new_password)
+      B-->>W: OK
+      U->>A: Volta ao app e informa e‑mail
+      A->>B: login(email, password)
+      B-->>A: token
+      A->>A: Salva token (Keychain)
+    else Usuário existe
+      B-->>A: {password_empty?}
+      alt password_empty==true
+        A->>B: send_password_setup(email)
+        B->>E: E-mail "Create Password"
+        E-->>U: Link para criar senha
+        U->>W: Define senha
+        W->>B: set_password
+        B-->>W: OK
+        U->>A: Informa e‑mail novamente
+        A->>B: login(email, password)
+        B-->>A: token
+        A->>A: Salva token
+      else password_empty==false
+        A-->>U: Solicita senha
+        U->>A: Digita senha
+        A->>B: login(email, password)
+        B-->>A: token
+        A->>A: Salva token
+      end
+    end
+  end
+
+  %% Paywall / Subscription
+  A-->>U: Área logada básica
+  A->>B: check_subscription(email)
+  alt Já é pago
+    B-->>A: subscription=ativa
+    A-->>U: Acesso total liberado
+  else Não é pago
+    B-->>A: subscription=ausente
+    A-->>U: Prompt: "Ativar assinatura"
+    U->>A: Clica "Ativar"
+    A->>S: Seleciona plano (redirect/SDK)
+    U->>S: Informa dados de pagamento
+    S->>B: Webhook/confirmar pagamento
+    B-->>S: OK
+    B-->>A: subscription=ativa
+    A-->>U: Acesso total liberado
+  end
+    </div>
+
+    <h2>Flow Summary</h2>
+    <ol>
+      <li>
+        <strong>Discovery & Signup on Web:</strong>
+        <p>Visitor lands on the marketing page, sees the value proposition and CTA for Early Adopters. Primary action is an embedded form (name, email, role, company). Backend validates and stores leads; successful submissions trigger a confirmation UI and a download email.</p>
+        <p><em>Metrics & expectations:</em> form conversion rate (target 3–10%), server response &lt;500ms, form validation error rate &lt;1%.</p>
+        <p><em>Instrumentation:</em> page_view, form_impression, form_submit, lead_created.</p>
+      </li>
+
+      <li>
+        <strong>Lead Processing & Email Delivery:</strong>
+        <p>Leads are accepted by the API (POST /leads), deduplicated, and queued for email delivery. Emails contain a download link with a tracking token. Backoff/retry applied for transient email delivery failures.</p>
+        <p><em>Acceptance:</em> >95% of lead emails delivered within 5 minutes, link click tracked.</p>
+      </li>
+
+      <li>
+        <strong>Download & Install:</strong>
+        <p>User clicks the download link which routes to a platform-aware download page (Windows/macOS). The download is served from a CDN; installers include telemetry to report successful installation.</p>
+        <p><em>Instrumentation:</em> download_initiated, download_completed, install_started, install_completed.</p>
+      </li>
+
+      <li>
+        <strong>App Startup & Authentication:</strong>
+        <p>On first run the app checks for a local token with the backend (verify_token). If valid, user lands in the logged area. If missing or invalid, the app prompts for email and either creates a user from the lead or triggers password setup.</p>
+        <p><em>Edge cases:</em> expired tokens, clock skew, offline first-run — fall back to email-based flow.</p>
+      </li>
+
+      <li>
+        <strong>Password Setup & Recovery:</strong>
+        <p>For leads without a password the system sends a secure, single-use password setup link that expires (e.g., 1 hour). The backend enforces rate limits and logs attempts for fraud detection.</p>
+        <p><em>Acceptance:</em> setup emails sent within 2 minutes and links expire.</p>
+      </li>
+
+      <li>
+        <strong>Paywall & Subscription:</strong>
+        <p>After authentication, the app checks subscription status. Non-subscribed users see a paywall and can purchase via Stripe (redirect or SDK). Webhooks confirm payment and the backend activates subscriptions atomically.</p>
+        <p><em>Reliability:</em> webhook processing must be idempotent and retry on transient errors. Paid conversion metric tracked.</p>
+      </li>
+
+      <li>
+        <strong>Instrumentation, Monitoring & Alerts:</strong>
+        <p>Key metrics to collect: user activation rate, paid conversion, email deliverability, download success rate, login success rate, and error rates. Configure alerts for sustained drops or spike in errors.</p>
+      </li>
+
+      <li>
+        <strong>Edge Cases & Error Handling:</strong>
+        <p>Handle network outages, partial downloads, duplicate leads, email bounces, and token tampering. Implement retries with exponential backoff and clear user-facing error messages with remediation steps.</p>
+      </li>
+
+      <li>
+        <strong>Acceptance Criteria:</strong>
+        <ul>
+          <li>Mermaid diagram renders correctly on the page.</li>
+          <li>Lead form submissions create leads and trigger download emails.</li>
+          <li>Installer downloads complete and report success events.</li>
+          <li>Auth flows allow password setup and login; token validation works.</li>
+          <li>Payment flow results in activated subscription and measurable conversion metric.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <div class="footer">
+    <p><a href="index.html">← Back to Strategic Hub</a> | Navi User Journey</p>
+  </div>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\daniel.aragao\Documents\Coding\mcp agents\Navi\sequence.html
