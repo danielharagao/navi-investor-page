@@ -430,7 +430,7 @@ nav {
 }
 
 .elevator-pitch {
-  background: var(--card-bg);
+  background: var(--white);
   backdrop-filter: blur(20px);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
@@ -438,6 +438,16 @@ nav {
   max-width: 800px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: var(--shadow-md);
+  color: var(--text-dark);
+}
+
+.elevator-pitch h2 {
+  color: var(--primary-blue);
+  margin-top: 0;
+}
+
+.elevator-pitch strong {
+  color: var(--accent-teal);
 }
 
 /* ======================================
